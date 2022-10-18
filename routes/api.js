@@ -28,8 +28,8 @@ module.exports = function (app) {
           console.log("newBoard", newBoard);
           newBoard.threads.push(newThread);
           newBoard.save((err, savedBoard) => {
-            console.log("newBoardData", data);
-            if (err || !data ) {
+            console.log("newBoardData", BoardData);
+            if (err || !BoardData ) {
               console.log(err);
               res.send("There was an error saving the new board");
             } else {
