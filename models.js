@@ -3,36 +3,32 @@ const { Schema } = mongoose;
 
 const date = new Date();
 
-// Create a schema for the board
 const ReplySchema = new Schema({
-    text: { type: String, required: true },
-    delete_password: { type: String, required: true },
-    created_on: { type: Date, default: date },
-    bumped_on: { type: Date, default: date },
-    reported: { type: Boolean, default: false },
+  text: { type: String },
+  delete_password: { type: String },
+  created_on: { type: Date, default: date },
+  bumped_on: { type: Date, default: date },
+  reported: { type: Boolean, default: false },
 });
-
 const Reply = mongoose.model("Reply", ReplySchema);
 
-// Create a schema for the board
 const ThreadSchema = new Schema({
-    text: { type: String, required: true },
-    delete_password: { type: String, required: true },
-    created_on: { type: Date, default: date },
-    bumped_on: { type: Date, default: date },
-    replies: { type: [ReplySchema], default: [] },
+  text: { type: String },
+  delete_password: { type: String },
+  reported: { type: Boolean, default: false },
+  created_on: { type: Date, default: date },
+  bumped_on: { type: Date, default: date },
+  replies: { type: [ReplySchema] },
 });
-
 const Thread = mongoose.model("Thread", ThreadSchema);
 
 const BoardSchema = new Schema({
-    name: { type: String, required: true },
-    threads: { type: [ThreadSchema], default: [] },
+  name: { type: String },
+  threads: { type: [ThreadSchema] },
 });
 
 const Board = mongoose.model("Board", BoardSchema);
 
-// Export the models
 exports.Board = Board;
 exports.Thread = Thread;
 exports.Reply = Reply;
