@@ -5,6 +5,6 @@ This is the boilerplate for the Anonymous Message Board project. Instructions fo
 
 <h2>Preview</h2>
 
-![alt text](https://github.com/secretoelit/boilerplate-project-messageboard/blob/main/preview1.png?raw=true)
+![alt text](https://github.com/borgebjornar/boilerplate-project-messageboard/blob/main/preview1.png?raw=true)
 
-![alt text](https://github.com/secretoelit/boilerplate-project-messageboard/blob/main/preview2.png?raw=true)
+![alt text](https://github.com/borgebjornar/boilerplate-project-messageboard/blob/main/preview2.png?raw=true)
